@@ -1,4 +1,4 @@
-# Website QurbanBerkah untuk MPPL (laravel)
+# Website Viesta Shop untuk PBKK (laravel)
 Dibuat untuk menyelesaikan tugas :v
 ## Catatan dan masalah deployment
 1. Di MySQL cukup buat DB aja (defaultnya qurbanberkah, edit di .env kalo beda)
