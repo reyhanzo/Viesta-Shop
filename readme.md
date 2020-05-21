@@ -1,29 +1,25 @@
 # Website Viesta Shop untuk PBKK (laravel)
 Dibuat untuk menyelesaikan tugas :v
 ## Catatan dan masalah deployment
-1. Di MySQL cukup buat DB aja (defaultnya qurbanberkah, edit di .env kalo beda)
-2. Install folder `vendor` di folder. execute di folder proyeknya (pastikan ada composer)
-```
+1. Pastikan composer sudah terinstall, node.js opsional. Jalankan di folder project.
+```cmd
 composer install
 ```
-3. Pakai migrations, jangan buat tabel sendiri
+2. Buat database dan sesuaikan credentialsnya di .env
 ```
+DB_DATABASE=<nama DB>
+DB_USERNAME=<nama username DB>
+DB_PASSWORD=<password DB>
+```
+3. Buat app key untuk laravel
+```cmd
+php artisan key:generate
+```
+4. Buat link dari public ke storage
+```cmd
+php artisan storage:link
+```
+5. Jalankan migrations
+```cmd
 php artisan migrate
 ```
-5. Belum sampe buat form, tapi udah install laravelcollective/html
-```
-composer require laravelcollective/html
-```
-6. User auth baru install dari bawaan laravel
-```
-composer require laravel/ui --dev
-php artisan ui bootstrap --auth
-npm install && npm run dev
-```
-7. DB ada 3, hewans, gambarhewans, users (bawaan laravel).
-
-   Note: kenapa hewans bukan hewan, itu fitur dari laravel :v
-   
-   Note2: Kalo gak suka ganti di modelnya, tambahin attribute $table, selengkapnya cek [docs](https://laravel.com/docs/master/eloquent)
-8. [artisan-view](https://github.com/svenluijten/artisan-view) < generate blade
-9. Kalau bisa pakai vhostsnya Apache, menggunakan `php artisan serve` tidak dijamin
